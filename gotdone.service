@@ -1,0 +1,13 @@
+[Unit]
+Description=GotDone logging service
+After=graphical.target
+
+[Service]
+Type=simple
+User=elcio
+WorkingDirectory=/home/elcio
+ExecStart=/home/elcio/.gotdone/daemon.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
